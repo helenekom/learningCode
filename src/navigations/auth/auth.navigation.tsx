@@ -4,6 +4,7 @@ import { ROUTES } from '../../consts/routes';
 import { Welcome } from '../../screens/auths/welcome.screen';
 import { SignIn } from '../../screens/auths/signin.screen';
 import { NavigationContainer } from '@react-navigation/native';
+import { EmailConfirmation } from '../../screens/auths/EmailConfirmation.screen';
 
 const Stack = createStackNavigator();
 export const navigationRef: any = React.createRef();
@@ -30,6 +31,11 @@ export class AuthNavigation extends Component {
         <Stack.Screen
           name={ROUTES.signIn}
           component={SignIn}
+          options={{header: () => null}}
+        />
+         <Stack.Screen
+          name={ROUTES.emailConfirmation}
+          component={EmailConfirmation}
           options={{header: () => null}}
         />
       </Stack.Navigator>

@@ -15,7 +15,7 @@ export const THEME = {
     },
     COLOR: {
         primaryColor : "white" ,
-        secondaryColor:"#8039DD" ,
+        secondaryColor:"#2596be" ,
         secondaryColorDark: "#410096",
         red: "rgb(200,0,0)",
         green: "green",
@@ -42,14 +42,14 @@ export const THEME = {
         button: BUTTON_SIZE,
     },
     Text: {
-        APP_NAME: "Tchitcha",
-        welcome:"Welcome to tchitcha",
+        APP_NAME: "Maket",
+        welcome:"Welcome to maket",
         signIn:"signIn",
         signUp:"signUp",
         connexion:"connexion",
         email:"email",
         password:"password",
-        forget_password:"reinitialiser mot de passe",
+        forget_password:"reset password",
 
     },
     

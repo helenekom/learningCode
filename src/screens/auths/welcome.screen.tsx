@@ -5,9 +5,8 @@ import logo from "../../assets/imgs/logo2.png";
 import { ROUTES } from '../../consts/routes';
 import { NextButton } from '../../components/nextButton/NextButton.component';
 import { navigate } from '../../navigations/auth/auth.navigation';
-
 const BUTTON_SIZE = 70
-const LOGO_SIZE=100
+const LOGO_SIZE=150
 const ICON_SIZE=30
 export class Welcome extends Component{
     toSignIn = ()=>{
@@ -28,7 +27,7 @@ export class Welcome extends Component{
 const styles= StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor: THEME.COLOR.secondaryColor,
+        backgroundColor: THEME.COLOR.primaryColor,
         alignItems: 'center',
         justifyContent: 'space-evenly',
         padding: THEME.SPACE.medium,
@@ -56,7 +55,7 @@ const styles= StyleSheet.create({
   },
   welcomeTxt:{
     fontSize: THEME.FONT_SIZE.large,
-    color: "white",
+    color: "black",
     fontWeight: "bold",
   }
 })

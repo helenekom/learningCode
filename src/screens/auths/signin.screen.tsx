@@ -4,11 +4,16 @@ import illustration from '../../assets/imgs/logo2.png'
 import { TextLink } from '../../components/textLink/TextLink.component';
 import { THEME } from '../../assets/style/theme.style';
 import { Button } from '../../components/button/Button.component';
+import { navigate } from '../../navigations/auth/auth.navigation';
+import { ROUTES } from '../../consts/routes';
 const LOGO_SIZE = 150
 const ILLUSTRATION_SIZE = 200
 
 
 export class SignIn extends Component{
+    toEmailC = ()=>{
+        navigate(ROUTES.emailConfirmation)
+    }
     state = {
         remove: true
     }
@@ -39,9 +44,8 @@ export class SignIn extends Component{
             </View>
             <TextInput placeholder={THEME.Text.email} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput   placeholder={THEME.Text.password} placeholderTextColor={THEME.COLOR.black} style={styles.input} />
-            <Button >{THEME.Text.signIn}</Button>
+            <Button handler={this.toEmailC}>{THEME.Text.signIn}</Button>
             <Text style={styles.texte}>{THEME.Text.forget_password}</Text>
-            <TextLink >{THEME.Text.signUp}</TextLink>
         </View>
         )
     }
@@ -70,13 +74,16 @@ const styles = StyleSheet.create({
         height: ILLUSTRATION_SIZE
     },
     texte:{
-        color:THEME.COLOR.black
+        color:THEME.COLOR.black,
+        
     },
     input: {
         backgroundColor: THEME.COLOR.gray,
         width: '100%',
         borderRadius: THEME.BORDER_RADIUS.small,
         color: THEME.COLOR.black,
+        paddingLeft:THEME.SPACE.small
+        
       
 
     }

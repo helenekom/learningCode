@@ -12,7 +12,7 @@ interface IProps{
 export class NextButton extends Component<IProps>{
     render(){
         return <TouchableOpacity style={styles.nextButton} onPress={this.props.handler}>
-        <FontAwesomeIcon icon={faChevronRight} color={THEME.COLOR.secondaryColor} size={ICON_SIZE}/>
+        <FontAwesomeIcon icon={faChevronRight} color={THEME.COLOR.primaryColor} size={ICON_SIZE}/>
     </TouchableOpacity>
     }
 } 
@@ -22,7 +22,7 @@ const styles= StyleSheet.create({
         width: BUTTON_SIZE,
         height: BUTTON_SIZE,
         borderRadius: BUTTON_SIZE/2,
-        backgroundColor: THEME.COLOR.white,
+        backgroundColor: THEME.COLOR.secondaryColor,
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 2*THEME.SPACE.large
