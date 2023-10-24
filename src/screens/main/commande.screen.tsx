@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import { Image, StyleSheet, Text, TextInput, View,Keyboard, TouchableOpacity } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, View,Keyboard, TouchableOpacity, ScrollView } from 'react-native'
 import illustration from '../../assets/imgs/b.png'
 import illustration2 from '../../assets/imgs/logo.png'
 import illustration3 from '../../assets/imgs/logo2.png'
 import illustration1 from '../../assets/imgs/logo2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faChevronRight, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import { Commande } from '../../components/commande/commande.component'
 import { THEME } from '../../assets/style/theme.style'
+import { AppEventEmitter, AppEvents } from '../../helpers/eventEmitter'
+import { MODALS } from '../../consts/modals'
+import { AddCommande } from './addCommande.screen'
 const ICON_SIZE=40
 export const listE = [
     {title: "HABIT",
@@ -43,15 +46,15 @@ logo:illustration2,
   ];
 
 export class ListeCommande extends Component{  
- 
     render() {
-        return (
+        return (<ScrollView >
     <View style={styles.container}>
             {listE.map((i: any) => (
          <Commande title={i.title} description={i.description} logo={i.logo} />
-       ))} 
+       ))}  
         </View>
-  )
+        
+        </ScrollView> )
     }
 }
 

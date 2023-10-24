@@ -50,6 +50,13 @@ export const THEME = {
         email:"email",
         password:"password",
         forget_password:"reset password",
+        CommandeTitle:"Commande",
+        description:"Autres",
+        CommandeName:"Article",
+        valider:"valider",
+        quantite:"quantite",
+        adresse:"adresse",
+        
 
     },
     
