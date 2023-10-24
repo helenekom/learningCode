@@ -40,5 +40,17 @@ export const THEME = {
     HEIGHT: {
         input : INPUT_HEIGHT,
         button: BUTTON_SIZE,
-    }
+    },
+    Text: {
+        APP_NAME: "Tchitcha",
+        welcome:"Welcome to tchitcha",
+        signIn:"signIn",
+        signUp:"signUp",
+        connexion:"connexion",
+        email:"email",
+        password:"password",
+        forget_password:"reinitialiser mot de passe",
+
+    },
+    
 }
