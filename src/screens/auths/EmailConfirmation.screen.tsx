@@ -3,11 +3,15 @@ import {Image, StyleSheet, Text, TextInput, View, Keyboard} from 'react-native';
 import {THEME} from '../../assets/style/theme.style';
 import illustration from '../../assets/imgs/logo2.png';
 import {Button} from '../../components/button/Button.component';
+import { navigate } from '../../navigations/app/app.navigation';
+import { ROUTES } from '../../consts/routes';
 const ILLUSTRATION_SIZE = 200;
 
 
 export class EmailConfirmation extends Component {
-  
+  toMainPart = ()=>{
+    navigate(ROUTES.MainPartenaireNavigation)
+}
   state = {
     remove: true
 }
@@ -37,12 +41,11 @@ componentWillUnmount() {
               <Text style={styles.appName}>{THEME.Text.APP_NAME}</Text>
             </View>
                 <TextInput
-                  placeholder={'Confirm verification code'}
-                  
+                  placeholder={'Confirm verification code'}  
                   style={styles.input}
                   placeholderTextColor={THEME.COLOR.black}
                 /> 
-            <Button >
+            <Button  handler={this.toMainPart}>
             Get verification code
             </Button>
             <Button >

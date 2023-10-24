@@ -4,8 +4,8 @@ import illustration from '../../assets/imgs/logo2.png'
 import { TextLink } from '../../components/textLink/TextLink.component';
 import { THEME } from '../../assets/style/theme.style';
 import { Button } from '../../components/button/Button.component';
-import { navigate } from '../../navigations/auth/auth.navigation';
 import { ROUTES } from '../../consts/routes';
+import { navigate } from '../../navigations/app/app.navigation';
 const LOGO_SIZE = 150
 const ILLUSTRATION_SIZE = 200
 

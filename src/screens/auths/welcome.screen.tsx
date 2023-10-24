@@ -4,7 +4,7 @@ import { THEME } from '../../assets/style/theme.style';
 import logo from "../../assets/imgs/logo2.png";
 import { ROUTES } from '../../consts/routes';
 import { NextButton } from '../../components/nextButton/NextButton.component';
-import { navigate } from '../../navigations/auth/auth.navigation';
+import { navigate } from '../../navigations/app/app.navigation';
 const BUTTON_SIZE = 70
 const LOGO_SIZE=150
 const ICON_SIZE=30
