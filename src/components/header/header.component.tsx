@@ -14,6 +14,7 @@ export class Header extends Component{
             <FontAwesomeIcon icon={faSearch} color={THEME.COLOR.white} size={THEME.FONT_SIZE.medium} />
             <FontAwesomeIcon icon={faEllipsisV} color={THEME.COLOR.white} size={THEME.FONT_SIZE.medium} />
         </TouchableOpacity>
+        
     </View>
   }
 }

@@ -18,7 +18,7 @@ export class HeaderBack extends Component<IProps>{
     const {title}=this.props
     return <View style={styles.container}>
         <TouchableOpacity onPress={this.toBack} style={styles.icone}>
-            <FontAwesomeIcon icon={faArrowLeft} color={THEME.COLOR.white} size={THEME.FONT_SIZE.large} />
+            <FontAwesomeIcon icon={faArrowLeft} color={THEME.COLOR.secondaryColor} size={THEME.FONT_SIZE.large} />
             </TouchableOpacity>
             <Text style={styles.text}>{title}</Text>
     </View>
@@ -27,7 +27,7 @@ export class HeaderBack extends Component<IProps>{
 const SPACE = 50
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: THEME.COLOR.secondaryColor,
+    backgroundColor: THEME.COLOR.primaryColor,
     height: SPACE,
     flexDirection: 'row',
   

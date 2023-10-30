@@ -14,7 +14,9 @@ import { Commande } from '../../components/commande/commande.component'
 import { THEME } from '../../assets/style/theme.style'
 import { AppEventEmitter, AppEvents } from '../../helpers/eventEmitter'
 import { MODALS } from '../../consts/modals'
-import { AddProduit } from './addProduit.screen'
+import { AddCommande } from './addCommandeC.screen'
+import { CommandeClient } from '../../components/commande/commandeClient.component'
+
 const ICON_SIZE=40
 export const listE = [
     {title: "MODEM",
@@ -57,22 +59,19 @@ number:5
 
   ];
 
-export class ListeCommande extends Component{  
+export class ListeCommandeClient extends Component{  
     showAddCommande = () => {
         AppEventEmitter.emit(AppEvents.ShowModal, {
-            name: MODALS.addCommande, modalChildren: <AddProduit />
+            name: MODALS.addCommande, modalChildren: <AddCommande />
         })
     }
     render() {
         
         return (<View style={styles.container}>
             {listE.map((i: any) => (
-         <Commande title={i.title} description={i.description} logo={i.logo} number={i.number} />
+         <CommandeClient title={i.title} description={i.description} logo={i.logo} number={i.number} />
        ))}  
        
-        <TouchableOpacity style={styles.AddButton} onPress={this.showAddCommande} >
-        <FontAwesomeIcon icon={faPlusCircle} color={THEME.COLOR.secondaryColor} size={ICON_SIZE}/>
-    </TouchableOpacity> 
     </View>
         )
     }

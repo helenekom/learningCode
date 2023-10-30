@@ -32,8 +32,8 @@ export const MyModal: React.FC<Props> = (props) => {
               onPress={handlePress}>
               <FontAwesomeIcon
                 icon={faTimes}
-                color={THEME.COLOR.white}
-                size={THEME.FONT_SIZE.small}
+                color={THEME.COLOR.secondaryColor}
+                size={THEME.FONT_SIZE.medium}
               />
             </TouchableOpacity>
           </View>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     borderRadius: 20,
-    backgroundColor: THEME.COLOR.secondaryColor,
+    backgroundColor: THEME.COLOR.primaryColor,
     justifyContent: 'center',
     alignItems: 'center',
   },

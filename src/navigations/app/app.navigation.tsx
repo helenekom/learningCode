@@ -7,6 +7,7 @@ import MainPartenaireNavigation from '../main/mainPartenaire.navigation';
 import MainRespoNavigation from '../main/mainRespo.navigation';
 import { HeaderAdmin } from '../../components/header/headerAdmin.component';
 import { Header } from '../../components/header/header.component';
+import MainClientNavigation from '../main/mainClient.navigation';
 const Stack = createStackNavigator();
 export const navigationRef: any = React.createRef();
 
@@ -32,7 +33,12 @@ export class AppNavigation extends Component {
         <Stack.Screen
           name={ROUTES.MainPartenaireNavigation}
           component={MainPartenaireNavigation}
-          options={{header: () =><Header/> }}
+          options={{header: () =><HeaderAdmin/> }}
+        />
+        <Stack.Screen
+          name={ROUTES.MainClientNavigation}
+          component={MainClientNavigation}
+          options={{header: () =><HeaderAdmin/> }}
         />
         <Stack.Screen
           name={ROUTES.MainRespoNavigation}

@@ -6,5 +6,7 @@ export const ROUTES = {
     authNavigation:"authNavigation",
     MainPartenaireNavigation:"MainPartenaireNavigation",
     MainRespoNavigation:"MainRespoNavigation",
-    listeCommande:"listeCommande"
+    MainClientNavigation:"MainClientNavigation",
+    listeCommande:"Produits",
+    addCommande:'Nouveau'
 } 

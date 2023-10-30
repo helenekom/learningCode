@@ -8,7 +8,7 @@ import { Button } from '../../components/button/Button.component';
 
 const ICON_SIZE = 70
 
-export class AddCommande extends Component {  
+export class AddProduit extends Component {  
    
     render() {
         return (
@@ -21,7 +21,6 @@ export class AddCommande extends Component {
             </TouchableOpacity>
             <TextInput placeholder={THEME.Text.CommandeName} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput placeholder={THEME.Text.quantite} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
-            <TextInput placeholder={THEME.Text.adresse} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput placeholder={THEME.Text.description} style={styles.input_description} placeholderTextColor={THEME.COLOR.black} />
             <Button  >{THEME.Text.valider}</Button>
         </View>

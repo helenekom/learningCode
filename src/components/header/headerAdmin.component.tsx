@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHistory, faMessage } from '@fortawesome/free-solid-svg-icons';
+import { faSearch,faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { THEME } from '../../assets/style/theme.style';import { navigate } from '../../navigations/app/app.navigation';
 import { ROUTES } from '../../consts/routes';
 ;
@@ -14,10 +14,10 @@ export class HeaderAdmin extends Component{
             <Text style={styles.text}>{THEME.Text.APP_NAME}</Text>
         <View style={styles.container_icon}>
             <TouchableOpacity >
-            <FontAwesomeIcon icon={faHistory} color={THEME.COLOR.white} size={THEME.FONT_SIZE.medium} />
+            <FontAwesomeIcon icon={faSearch} color={THEME.COLOR.white} size={THEME.FONT_SIZE.medium} />
             </TouchableOpacity>
             <TouchableOpacity >
-            <FontAwesomeIcon icon={faMessage} color={THEME.COLOR.white} size={THEME.FONT_SIZE.medium} />
+            <FontAwesomeIcon icon={faEllipsisV} color={THEME.COLOR.white} size={THEME.FONT_SIZE.medium} />
             </TouchableOpacity>
         </View>
     </View>

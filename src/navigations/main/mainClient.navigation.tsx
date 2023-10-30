@@ -7,15 +7,16 @@ import { ROUTES } from '../../consts/routes';
 import { SignIn } from '../../screens/auths/signin.screen';
 import { Welcome } from '../../screens/auths/welcome.screen';
 import { ListeCommande } from '../../screens/main/commande.screen';
-import { AddCommande } from '../../screens/main/addProduit.screen';
+
 import { ListeHistorique } from '../../screens/main/listeHistorique.screen';
+import { ListeCommandeClient } from '../../screens/main/commandeClient.screen';
 
 
 
 
 const Tap = createMaterialTopTabNavigator();
 
-class MainPartenaireNavigation extends Component {
+class MainClientNavigation extends Component {
   render() {
     return (
         <Tap.Navigator
@@ -43,18 +44,13 @@ class MainPartenaireNavigation extends Component {
           >
             <Tap.Screen
               name={ROUTES.listeCommande}
-             component={ListeCommande}/>
+             component={ListeCommandeClient}/>
           <Tap.Screen
-            name={'Commandes'}
+            name={'Historiques'}
             component={ListeHistorique}
           />
-           <Tap.Screen
-            name={'Services'}
-            component={ListeHistorique}
-          />
-          
         </Tap.Navigator>
     );
   }
 }
-export default MainPartenaireNavigation;
+export default MainClientNavigation;

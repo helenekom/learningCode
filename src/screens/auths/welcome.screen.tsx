@@ -16,7 +16,7 @@ export class Welcome extends Component{
     render(){
         return <View style={styles.container}> 
             <View style={styles.inputContainer}>
-            <Image style={styles.logo} source={logo} />
+            <Text style={styles.logoTxt}>M</Text>
             <Text style={styles.welcomeTxt}>{THEME.Text.welcome}</Text>  
             </View>
             <NextButton handler={this.toSignIn}/>
@@ -57,5 +57,16 @@ const styles= StyleSheet.create({
     fontSize: THEME.FONT_SIZE.large,
     color: "black",
     fontWeight: "bold",
+  },
+  logoTxt:{
+
+    fontSize: 6*THEME.FONT_SIZE.large,
+    color: THEME.COLOR.secondaryColor,
+    
+    fontFamily: 'Arial',
+    fontWeight: "bold",
+    textShadowColor: 'black',
+    textShadowOffset: { width:7, height: 4 },
+    textShadowRadius: 14,
   }
 })

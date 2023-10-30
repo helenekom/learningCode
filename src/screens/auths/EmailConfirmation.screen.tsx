@@ -12,6 +12,9 @@ export class EmailConfirmation extends Component {
   toMainPart = ()=>{
     navigate(ROUTES.MainPartenaireNavigation)
 }
+toMainClient = ()=>{
+  navigate(ROUTES.MainClientNavigation)
+}
   state = {
     remove: true
 }
@@ -36,7 +39,7 @@ componentWillUnmount() {
     const { remove} = this.state
     return (
           <View style={styles.container}>
-            {remove&&<Image source={illustration} style={styles.image} />}
+            {remove&&<Text style={styles.logoTxt}>M</Text>}
             <View>
               <Text style={styles.appName}>{THEME.Text.APP_NAME}</Text>
             </View>
@@ -45,7 +48,7 @@ componentWillUnmount() {
                   style={styles.input}
                   placeholderTextColor={THEME.COLOR.black}
                 /> 
-            <Button  handler={this.toMainPart}>
+            <Button  handler={this.toMainClient}>
             Get verification code
             </Button>
             <Button >
@@ -80,4 +83,15 @@ const styles = StyleSheet.create({
     color: THEME.COLOR.black,
     paddingLeft:THEME.SPACE.small
   },
+  logoTxt:{
+
+    fontSize: 6*THEME.FONT_SIZE.large,
+    color: THEME.COLOR.secondaryColor,
+    
+    fontFamily: 'Arial',
+    fontWeight: "bold",
+    textShadowColor: 'black',
+    textShadowOffset: { width:7, height: 4 },
+    textShadowRadius: 14,
+  }
 });

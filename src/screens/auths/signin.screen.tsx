@@ -38,9 +38,9 @@ export class SignIn extends Component{
         const { remove} = this.state
         return ( 
         <View style={styles.container}>  
-        {remove&&<Image source={illustration} style={styles.image} />}
+        {remove&& <Text style={styles.logoTxt}>M</Text>}
             <View>
-                <Text style={styles.appName}>{THEME.Text.APP_NAME}</Text>
+                <Text style={styles.appName}>maket</Text>
             </View>
             <TextInput placeholder={THEME.Text.email} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput   placeholder={THEME.Text.password} placeholderTextColor={THEME.COLOR.black} style={styles.input} />
@@ -86,5 +86,16 @@ const styles = StyleSheet.create({
         
       
 
-    }
+    },
+    logoTxt:{
+
+        fontSize: 6*THEME.FONT_SIZE.large,
+        color: THEME.COLOR.secondaryColor,
+        
+        fontFamily: 'Arial',
+        fontWeight: "bold",
+        textShadowColor: 'black',
+        textShadowOffset: { width:7, height: 4 },
+        textShadowRadius: 14,
+      }
 })
