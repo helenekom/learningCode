@@ -48,7 +48,7 @@ componentWillUnmount() {
                   style={styles.input}
                   placeholderTextColor={THEME.COLOR.black}
                 /> 
-            <Button  handler={this.toMainClient}>
+            <Button  handler={this.toMainPart}>
             Get verification code
             </Button>
             <Button >

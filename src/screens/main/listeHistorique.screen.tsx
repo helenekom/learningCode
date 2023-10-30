@@ -13,84 +13,30 @@ import { THEME } from '../../assets/style/theme.style'
 
 export const listE = [
  
-{name: "Nguebs Besos",
-typeUser: "Admin",
+{name: "MODEM",
+typeUser: "En cours",
 day:"12/02/23",
 hour:"19H50",
 image:illustration
 },
-{name: "Pablo escobar",
-typeUser: "eleve",
+{name: "MODEM",
+typeUser: "en cours",
 day:"12/02/23",
 hour:"20H50",
 image:illustration2
 },
-{name: "Alino vegos",
-typeUser: "manager",
+{name: "TELEPHONE",
+typeUser: "ITEL",
 day:"12/02/23",
 hour:"9H50",
 image:illustration3
 },
-{name: "El proffesor",
-typeUser: "RespoClasse",
-day:"12/02/23",
-hour:"9H50",
-image:illustration1
-},
-{name: "ndiguimite",
-typeUser: "Admin",
-day:"12/02/23",
-hour:"9H50",
-image:illustration
-},
-{name: "Ddi tali",
-typeUser: "manager",
-day:"12/02/23",
-hour:"9H50",
-image:illustration2
-},
-{name: "Python vegas ",
-typeUser: "eleve",
-day:"12/02/23",
-hour:"9H50",
-image:illustration3
-},
-{name: "Thales",
-typeUser: "enseignant",
-day:"12/02/23",
-hour:"9H50",
-image:illustration1
-},
-{name: "Amen Distra",
-typeUser: "enseignant",
-day:"12/02/23",
-hour:"9H50",
-image:illustration2
-},
-{name: "Malta gerard",
-typeUser: "Admin",
-day:"12/02/23",
-hour:"9H50",
-image:illustration3
-},
-{name: "Alain beber",
-typeUser: "eleve",
-day:"12/02/23",
-hour:"9H50",
-image:illustration1
-},
-{name: "Jeff Rost",
-typeUser: "Admin",
-day:"12/02/23",
-hour:"9H50",
-image:illustration3
-},
-{name: "Maman",
-typeUser: "eleve",
-day:"12/02/23",
-hour:"9H50",
-image:illustration1
-},
+
+
+
+
+
+
   ];
 
 export class ListeHistorique extends Component{  
