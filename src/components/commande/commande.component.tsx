@@ -4,7 +4,7 @@ import { THEME } from '../../assets/style/theme.style';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { AppEventEmitter, AppEvents } from '../../helpers/eventEmitter';
-import { AddCommande } from '../../screens/main/addProduit.screen';
+
 import { MODALS } from '../../consts/modals';
 import { Detail } from '../detail/transactionDetail.component.';
 
