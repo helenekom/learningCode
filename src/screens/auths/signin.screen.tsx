@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Image, StyleSheet, Text, TextInput,  View, Keyboard, TouchableOpacity} from 'react-native'
-import illustration from '../../assets/imgs/logo2.png'
-import { TextLink } from '../../components/textLink/TextLink.component';
+import { Image, StyleSheet, Text, TextInput,  View, Keyboard, TouchableOpacity, ActivityIndicator} from 'react-native'
 import { THEME } from '../../assets/style/theme.style';
 import { Button } from '../../components/button/Button.component';
 import { ROUTES } from '../../consts/routes';
@@ -11,11 +9,38 @@ const ILLUSTRATION_SIZE = 200
 
 
 export class SignIn extends Component{
-    toEmailC = ()=>{
-        navigate(ROUTES.emailConfirmation)
+
+    timer=()=>{
+        this.setState({show:true})
+        setTimeout(()=>{
+           
+            if(this.state.email==='fournisseur@gmail.com'&&this.state.psw==='fournisseur7777'){
+                navigate(ROUTES.MainPartenaireNavigation)
+            }else
+             if(this.state.email==='admin@gmail.com'&&this.state.psw==='admin7777'){
+                navigate(ROUTES.MainRespoNavigation)
+            }
+            else
+             if(this.state.email==='client@gmail.com'&&this.state.psw==='client7777'){
+                navigate(ROUTES.MainClientNavigation)
+            }else{
+                this.setState({show:false})
+            }
+            
+        },200)
+    }
+    toSignup = ()=>{
+        navigate(ROUTES.signUp)
+    }
+    toMainPart = ()=>{
+
+       
     }
     state = {
-        remove: true
+        remove: true,
+        show:false,
+        email:'',
+        psw:''
     }
     handleKeyboardDidShow= (e:any)=>{
         this.setState({remove:false})
@@ -26,6 +51,7 @@ export class SignIn extends Component{
     keyboardDidShowSub: any;
     keyboardDidHideSub: any;
     componentDidMount() {
+        console.log(this.state.email,'zzzzzz')
         this.keyboardDidShowSub = Keyboard.addListener('keyboardDidShow', this.handleKeyboardDidShow)
         this.keyboardDidHideSub = Keyboard.addListener('keyboardDidHide', this.handleKeyboardDidHide)
       }
@@ -38,14 +64,27 @@ export class SignIn extends Component{
         const { remove} = this.state
         return ( 
         <View style={styles.container}>  
-        {remove&& <Text style={styles.logoTxt}>M</Text>}
+        
+        {remove&& <Text style={styles.logoTxt}>BS</Text>}
             <View>
-                <Text style={styles.appName}>maket</Text>
+                <Text style={styles.appName}>BYKA space</Text>
             </View>
-            <TextInput placeholder={THEME.Text.email} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
-            <TextInput   placeholder={THEME.Text.password} placeholderTextColor={THEME.COLOR.black} style={styles.input} />
-            <Button handler={this.toEmailC}>{THEME.Text.signIn}</Button>
-            <Text style={styles.texte}>{THEME.Text.forget_password}</Text>
+            <TextInput onChangeText={(e)=>this.setState({email:e})} placeholder={THEME.Text.email} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
+
+            
+            <TextInput  onChangeText={(e)=>this.setState({psw:e})}  placeholder={THEME.Text.password} placeholderTextColor={THEME.COLOR.black} style={styles.input} />
+          
+            {
+                this.state.show?
+                <ActivityIndicator/>:
+                <Button handler={this.timer}>{THEME.Text.signIn}</Button>
+                
+                
+            }
+            
+           <TouchableOpacity onPress={this.toSignup}>
+            <Text style={styles.texte}>{THEME.Text.signUp}</Text>
+            </TouchableOpacity>
         </View>
         )
     }
@@ -97,5 +136,5 @@ const styles = StyleSheet.create({
         textShadowColor: 'black',
         textShadowOffset: { width:7, height: 4 },
         textShadowRadius: 14,
-      }
+      },
 })

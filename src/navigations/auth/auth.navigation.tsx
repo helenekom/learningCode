@@ -2,11 +2,14 @@ import React, {Component} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import { ROUTES } from '../../consts/routes';
 import { Welcome } from '../../screens/auths/welcome.screen';
-import { SignIn } from '../../screens/auths/signin.screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { EmailConfirmation } from '../../screens/auths/EmailConfirmation.screen';
-import { HeaderWelcome } from '../../components/header/headerWelcome.component';
 import { HeaderBack } from '../../components/header/headerBack.component';
+import { SignIn } from '../../screens/auths/signin.screen';
+import { ProduitWelcome } from '../../screens/auths/produitWelcome.screen';
+import { HeaderWelcome } from '../../components/header/headerWelcome.component';
+import { SignUp } from '../../screens/auths/signUp.screen';
+
 
 const Stack = createStackNavigator();
 
@@ -26,9 +29,14 @@ export class AuthNavigation extends Component {
           options={{header: () => <HeaderBack title={'Sign in'}/>}}
         />
          <Stack.Screen
-          name={ROUTES.emailConfirmation}
-          component={EmailConfirmation}
-          options={{header: () => <HeaderBack title={'Confirmation'}/>}}
+          name={'produitWelcome'}
+          component={ProduitWelcome}
+          options={{header: () => <HeaderWelcome/>}}
+        />
+         <Stack.Screen
+          name={ROUTES.signUp}
+          component={SignUp}
+          options={{header: () => <HeaderBack title={'signUp'}/>}}
         />
       </Stack.Navigator>
     );

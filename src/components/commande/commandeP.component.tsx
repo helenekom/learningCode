@@ -4,9 +4,9 @@ import { THEME } from '../../assets/style/theme.style';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { AppEventEmitter, AppEvents } from '../../helpers/eventEmitter';
+
 import { MODALS } from '../../consts/modals';
 import { Detail } from '../detail/transactionDetail.component.';
-import { AddCommande } from '../../screens/main/addCommandeC.screen';
 import { DetailClient } from '../detail/detailClient.component';
 
 interface IProps{
@@ -17,10 +17,10 @@ interface IProps{
 }
 const LOGO_SIZE =50
 const ICON_SIZE=30
-export class CommandeClient extends Component<IProps>{
+export class CommandeP extends Component<IProps>{
     showDetail = () => {
         AppEventEmitter.emit(AppEvents.ShowModal, {
-            name: MODALS.detail, modalChildren: <DetailClient />
+            name: MODALS.addCommande, modalChildren: <DetailClient />
         })
     }
     render(){

@@ -9,17 +9,18 @@ const BUTTON_SIZE = 70
 const LOGO_SIZE=150
 const ICON_SIZE=30
 export class Welcome extends Component{
-    toSignIn = ()=>{
-        navigate(ROUTES.signIn)
+    toProduitWelcome = ()=>{
+        navigate('produitWelcome')
     }
   
     render(){
         return <View style={styles.container}> 
             <View style={styles.inputContainer}>
-            <Text style={styles.logoTxt}>M</Text>
+            <Text style={styles.logoTxt}>BS</Text>
+           
             <Text style={styles.welcomeTxt}>{THEME.Text.welcome}</Text>  
             </View>
-            <NextButton handler={this.toSignIn}/>
+            <NextButton handler={this.toProduitWelcome}/>
         </View>
     }
 }

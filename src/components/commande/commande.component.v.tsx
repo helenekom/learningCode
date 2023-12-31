@@ -4,10 +4,9 @@ import { THEME } from '../../assets/style/theme.style';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { AppEventEmitter, AppEvents } from '../../helpers/eventEmitter';
+
 import { MODALS } from '../../consts/modals';
 import { Detail } from '../detail/transactionDetail.component.';
-import { AddCommande } from '../../screens/main/addCommandeC.screen';
-import { DetailClient } from '../detail/detailClient.component';
 
 interface IProps{
     logo:any;
@@ -17,16 +16,12 @@ interface IProps{
 }
 const LOGO_SIZE =50
 const ICON_SIZE=30
-export class CommandeClient extends Component<IProps>{
-    showDetail = () => {
-        AppEventEmitter.emit(AppEvents.ShowModal, {
-            name: MODALS.detail, modalChildren: <DetailClient />
-        })
-    }
+export class CommandeV extends Component<IProps>{
+   
     render(){
         const{logo,title,description,number}=this.props
         return (<View style={styles.container}>
-            <TouchableOpacity onPress={this.showDetail}>
+            <TouchableOpacity >
             <View style={{flexDirection:'row'}}>
              <Image source={logo} style={styles.logo} />
              <View style={{flexDirection:'row'}}>   

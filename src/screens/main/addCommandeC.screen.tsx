@@ -16,8 +16,10 @@ export class AddCommande extends Component {
             <View>
                 <Text style={styles.title}>Passer commande</Text>
             </View>
+            <TextInput placeholder={'Noms'} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
+            <TextInput placeholder={'Telephone'} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput placeholder={THEME.Text.quantite} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
-            <TextInput placeholder={'commentaire'} style={styles.input_description} placeholderTextColor={THEME.COLOR.black} />
+            
             <Button  >{THEME.Text.valider}</Button>
         </View>
   )

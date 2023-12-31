@@ -15,7 +15,7 @@ export const THEME = {
     },
     COLOR: {
         primaryColor : "white" ,
-        secondaryColor:"#2596be" ,
+        secondaryColor:"green" ,
         secondaryColorDark: "#410096",
         red: "rgb(200,0,0)",
         green: "green",
@@ -42,8 +42,10 @@ export const THEME = {
         button: BUTTON_SIZE,
     },
     Text: {
-        APP_NAME: "Maket",
-        welcome:"Welcome to maket",
+        name:'name',
+        recherche:'recherche',
+        APP_NAME: "Byka space",
+        welcome:"Welcome to BYKA SPACE",
         signIn:"signIn",
         signUp:"signUp",
         connexion:"connexion",

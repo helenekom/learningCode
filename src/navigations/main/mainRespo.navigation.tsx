@@ -6,6 +6,11 @@ import { View } from 'react-native';
 import { ROUTES } from '../../consts/routes';
 import { SignIn } from '../../screens/auths/signin.screen';
 import { Welcome } from '../../screens/auths/welcome.screen';
+import { ListeCommande } from '../../screens/main/commande.screen';
+import { ListeHistorique } from '../../screens/main/listeHistorique.screen';
+import { ListeCommandeRespo } from '../../screens/main/commandeRespo.screen';
+import { ListeHistoriqueRespo } from '../../screens/main/listeHistoriqueRespo.screen';
+import { ListeFournisseurs } from '../../screens/main/listeFournisseurs.screen';
 
 
 
@@ -39,11 +44,15 @@ class MainRespoNavigation extends Component {
           
           >
             <Tap.Screen
-              name={ROUTES.signIn}
-             component={SignIn}/>
+              name={'produits'}
+             component={ListeCommandeRespo}/>
           <Tap.Screen
-            name={ROUTES.welcome}
-            component={Welcome}
+            name={'commande'}
+            component={ListeHistoriqueRespo}
+          />
+          <Tap.Screen
+            name={'fournisseurs'}
+            component={ListeFournisseurs}
           />
           
         </Tap.Navigator>

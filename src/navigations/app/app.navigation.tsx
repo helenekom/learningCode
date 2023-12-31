@@ -43,7 +43,7 @@ export class AppNavigation extends Component {
         <Stack.Screen
           name={ROUTES.MainRespoNavigation}
           component={MainRespoNavigation}
-          options={{header: () =>null }}
+          options={{header: () =><HeaderAdmin/> }}
         />
         </Stack.Navigator>
       </NavigationContainer>

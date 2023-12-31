@@ -2,33 +2,34 @@ import React, {Component} from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { THEME } from '../../assets/style/theme.style';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlusCircle,faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { AppEventEmitter, AppEvents } from '../../helpers/eventEmitter';
+
 import { MODALS } from '../../consts/modals';
 import { Detail } from '../detail/transactionDetail.component.';
-import { AddCommande } from '../../screens/main/addCommandeC.screen';
 import { DetailClient } from '../detail/detailClient.component';
 
 interface IProps{
-    logo:any;
+   
     title:any;
     description:any;
     number:any;
 }
-const LOGO_SIZE =50
+const LOGO_SIZE =70
 const ICON_SIZE=30
-export class CommandeClient extends Component<IProps>{
+export class Fournisseurs extends Component<IProps>{
     showDetail = () => {
         AppEventEmitter.emit(AppEvents.ShowModal, {
-            name: MODALS.detail, modalChildren: <DetailClient />
+            name: MODALS.addCommande, modalChildren: <DetailClient />
         })
     }
     render(){
-        const{logo,title,description,number}=this.props
+        const{title,description,number}=this.props
         return (<View style={styles.container}>
-            <TouchableOpacity onPress={this.showDetail}>
+            <TouchableOpacity >
             <View style={{flexDirection:'row'}}>
-             <Image source={logo} style={styles.logo} />
+            <FontAwesomeIcon icon={faCircleUser} color={THEME.COLOR.secondaryColor} style={styles.logo} size={44}/>
+          
              <View style={{flexDirection:'row'}}>   
         <View style={styles.containerText}>
         <Text style={styles.title}>{title}</Text>
@@ -78,7 +79,7 @@ const styles= StyleSheet.create({
         
         borderRadius:THEME.BORDER_RADIUS.medium,
         backgroundColor:THEME.COLOR.secondaryColor,
-        width:'7%',
+        width:'20%',
         
             },
             textNumber:{

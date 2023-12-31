@@ -9,6 +9,10 @@ import { Welcome } from '../../screens/auths/welcome.screen';
 import { ListeCommande } from '../../screens/main/commande.screen';
 import { AddCommande } from '../../screens/main/addProduit.screen';
 import { ListeHistorique } from '../../screens/main/listeHistorique.screen';
+import { ListeCommandeClient } from '../../screens/main/commandeClient.screen';
+import { ListeCommandePartenaire } from '../../screens/main/commandePartenaire.screen';
+import { ListeHistoriquePartenaire } from '../../screens/main/listeHistoriquePartenaire.screen';
+import { ListeProduitP } from '../../screens/main/fournisseur.screen';
 
 
 
@@ -41,17 +45,18 @@ class MainPartenaireNavigation extends Component {
           }}
           
           >
-            <Tap.Screen
-              name={ROUTES.listeCommande}
-             component={ListeCommande}/>
-          <Tap.Screen
-            name={'Commandes'}
-            component={ListeHistorique}
+             <Tap.Screen
+            name={'all produit'}
+            component={ListeProduitP}
           />
            <Tap.Screen
-            name={'Services'}
-            component={ListeHistorique}
+              name={' mes produit'}
+             component={ListeCommande}/>
+          <Tap.Screen
+            name={'commande'}
+            component={ListeHistoriquePartenaire}
           />
+         
           
         </Tap.Navigator>
     );
