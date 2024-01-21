@@ -36,12 +36,13 @@ export class SignUp extends Component {
         const { remove} = this.state
         return (
     <View style={styles.container}>
-            {remove&&<Text style={styles.logoTxt}>BS</Text>}
+            {remove&&<Text style={styles.logoTxt}>LC</Text>}
             <View>
-                <Text style={styles.appName}>BYKA space</Text>
+                <Text style={styles.appName}>LEARNING CODE</Text>
             </View>
             <TextInput placeholder={THEME.Text.name} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput placeholder={THEME.Text.email} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
+            <TextInput placeholder={THEME.Text.number} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <TextInput placeholder={THEME.Text.password} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
             <Button >{THEME.Text.signUp}</Button>
             <TextLink handler={this.toSingin}>{THEME.Text.signIn}</TextLink>

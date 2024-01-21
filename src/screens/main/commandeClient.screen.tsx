@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Image, StyleSheet, Text, TextInput, View,Keyboard, TouchableOpacity, ScrollView } from 'react-native'
-import illustration from '../../assets/imgs/ma.jpg'
+import illustration from '../../assets/imgs/aaa.jpg'
 import illustration2 from '../../assets/imgs/sze.jpg'
 import illustration3 from '../../assets/imgs/zse.jpg'
 import illustration1 from '../../assets/imgs/qae.jpg'
@@ -19,39 +19,29 @@ import { CommandeClient } from '../../components/commande/commandeClient.compone
 
 const ICON_SIZE=40
 export const listE = [
-    {title: "MODEM",
-    description: "Toutes marques",
-    logo:illustration2,
-    number:56
+    {title: "LANGAGE C",
+    description: "pour les debutants",
+    logo:illustration,
+    number:6
 },
-    {title: "TELEPHONE",
-    description: "Toutes marques",
-    logo:illustration1,
-    number:4
-},
-{title: "CARTE CREDIT",
-description: "Electronique",
-logo:illustration5,
-number:44
-},
-{title: "TELEPHONE",
-description: "Toutes marques",
-logo:illustration3,
-number:7
-},
-{title: "CREDIT",
-description: "plusieur pack",
-logo:illustration6,
-number:5
-},
-    {title: "MODEM",
-    description: "Toute les marques",
+    {title: "JAVA",
+    description: 'java pour zero',
     logo:illustration,
     number:4
 },
-{title: "TELEPHONE",
-description: "Toutes les marques",
-logo:illustration46,
+{title: "JAVASCRIPT",
+description: "pour les debutants",
+logo:illustration,
+number:4
+},
+{title: "HTML",
+description: "Pour les zeros",
+logo:illustration,
+number:5
+},
+{title: "PYTHON",
+description: "Pour debutant",
+logo:illustration,
 number:5
 },
 

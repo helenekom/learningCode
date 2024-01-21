@@ -18,7 +18,7 @@ export class Button extends Component<IProps>{
 const styles= StyleSheet.create({
     nextButton:{
         width: "100%",
-        height: THEME.HEIGHT.button,
+        height: 1.2*THEME.HEIGHT.button,
         borderRadius:THEME.BORDER_RADIUS.medium,
         backgroundColor: THEME.COLOR.secondaryColor,
         alignItems: 'center',
@@ -27,6 +27,8 @@ const styles= StyleSheet.create({
         marginBottom: THEME.SPACE.small
     },
     text:{
-        color: THEME.COLOR.white
+        color: THEME.COLOR.white,
+        fontSize:25,
+        fontWeight:'bold'
     }
 })

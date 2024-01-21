@@ -1,27 +1,35 @@
 
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { THEME } from '../../assets/style/theme.style';
-import logo from "../../assets/imgs/logo2.png";
+import logo from "../../assets/imgs/aaa.jpg";
 import { ROUTES } from '../../consts/routes';
 import { navigate } from '../../navigations/app/app.navigation';
 import { Component } from 'react';
 import { NextButton } from '../../components/nextButton/NextButton.component';
+import { Button } from '../../components/button/Button.component';
 const BUTTON_SIZE = 70
 const LOGO_SIZE=150
 const ICON_SIZE=30
-export class Welcome extends Component{
-    toAccueil = ()=>{
-        navigate('accueil')
+export class Accueil extends Component{
+    toSignUp = ()=>{
+        navigate('signUp')
     }
-  
+    MainClientNavigation = ()=>{
+        navigate('MainClientNavigation')
+    }
+    
     render(){
         return <View style={styles.container}> 
             <View style={styles.inputContainer}>
-            <Text style={styles.logoTxt}>LC</Text>
            
-            <Text style={styles.welcomeTxt}>{THEME.Text.welcome}</Text>  
+            <Image style={styles.image} source={logo}/>
+            <Text style={styles.title}>Apprendre a coder</Text>  
+            <Text style={styles.Stitle}>maitrisez les compestances necessaire pour lire et ecrire du code, creer des applications et des jeux, et faire progresser votre carriere </Text>
             </View>
-            <NextButton handler={this.toAccueil}/>
+            <Button handler={this.toSignUp}>{THEME.Text.commencer}</Button>
+            <TouchableOpacity onPress={this.MainClientNavigation} >
+            <Text style={styles.textB}>Jai deja un compte</Text>  
+            </TouchableOpacity>
         </View>
     }
 }
@@ -34,6 +42,21 @@ const styles= StyleSheet.create({
         justifyContent: 'space-evenly',
         padding: THEME.SPACE.medium,
 
+    },
+    Stitle:{
+alignItems:'center',
+fontSize:24,
+textAlign:'center',
+color:'black'
+
+    },
+    textB:{
+        color:'blue',
+        fontSize:20
+    },
+    image:{
+width:300,
+height:300
     },
     nextButton:{
         width: BUTTON_SIZE,
@@ -50,6 +73,12 @@ const styles= StyleSheet.create({
         width: LOGO_SIZE,
         height: LOGO_SIZE,
        
+    },
+    title:{
+color:'black',
+fontSize:40,
+fontWeight:'bold',
+
     },
   inputContainer: {
     flex: 1,

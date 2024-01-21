@@ -1,5 +1,6 @@
 export const ROUTES = {
     welcome: "welcome",
+    accueil:'accueil',
     signIn: "signIn",
     emailConfirmation:"emailConfirmation",
     signUp: "signUp", 
@@ -7,6 +8,6 @@ export const ROUTES = {
     MainPartenaireNavigation:"MainPartenaireNavigation",
     MainRespoNavigation:"MainRespoNavigation",
     MainClientNavigation:"MainClientNavigation",
-    listeCommande:"Produits",
+    listeCommande:"Cours",
     addCommande:'Nouveau'
 } 

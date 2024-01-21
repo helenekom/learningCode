@@ -21,7 +21,7 @@ export class SignIn extends Component{
                 navigate(ROUTES.MainRespoNavigation)
             }
             else
-             if(this.state.email==='client@gmail.com'&&this.state.psw==='client7777'){
+             if(this.state.email==='etudiant@gmail.com'&&this.state.psw==='etudiant7777'){
                 navigate(ROUTES.MainClientNavigation)
             }else{
                 this.setState({show:false})
@@ -65,9 +65,9 @@ export class SignIn extends Component{
         return ( 
         <View style={styles.container}>  
         
-        {remove&& <Text style={styles.logoTxt}>BS</Text>}
+        {remove&& <Text style={styles.logoTxt}>LC</Text>}
             <View>
-                <Text style={styles.appName}>BYKA space</Text>
+                <Text style={styles.appName}>LEARNING CODE</Text>
             </View>
             <TextInput onChangeText={(e)=>this.setState({email:e})} placeholder={THEME.Text.email} style={styles.input} placeholderTextColor={THEME.COLOR.black} />
 

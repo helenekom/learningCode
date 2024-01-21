@@ -9,6 +9,7 @@ import { SignIn } from '../../screens/auths/signin.screen';
 import { ProduitWelcome } from '../../screens/auths/produitWelcome.screen';
 import { HeaderWelcome } from '../../components/header/headerWelcome.component';
 import { SignUp } from '../../screens/auths/signUp.screen';
+import { Accueil } from '../../screens/auths/accueil.screen';
 
 
 const Stack = createStackNavigator();
@@ -21,6 +22,11 @@ export class AuthNavigation extends Component {
         <Stack.Screen
           name={ROUTES.welcome}
           component={Welcome}
+          options={{header: () => null }}
+        />
+         <Stack.Screen
+          name={ROUTES.accueil}
+          component={Accueil}
           options={{header: () => null }}
         />
         <Stack.Screen
